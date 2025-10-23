@@ -7,7 +7,7 @@ on:
 jobs:
 
   super-linter:
-    name: Shell/Docker/YAML/Spell Lint
+    name: Linting
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,3 +19,4 @@ jobs:
         uses: github/super-linter/slim@v6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_ALL_CODEBASE: false # consider setting this to true some day 
